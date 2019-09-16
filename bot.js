@@ -49,8 +49,8 @@ client.on('ready',  () => {
 
 
   client.on('message', msg => {
-    if(msg.content === '$help')
-    msg.reply('**تــم الارسـال فـي الـخاص .  :white_check_mark:**')
+    if(msg.content === '$inv')
+    msg.reply('**Link Bot. **')
   });
 
 var prefix = "$";  
@@ -88,7 +88,7 @@ var prefix = "$";
             SEND_MESSAGES: false
 
               }).then(() => {
-                  message.reply("**✅__تم تقفيل الشات__ ✅ **")
+                  message.reply("** ${yes1} __تم تقفيل الشات__  **")
               });
                 }
 //FIRE BOT
