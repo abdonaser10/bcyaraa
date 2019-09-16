@@ -61,7 +61,7 @@ client.on('message', message => {
     var yes1 = client.emojis.find(emoji => emoji.name === "yes1")
     var Ticket = client.emojis.find(emoji => emoji.name === "Ticket")
     var Profile = client.emojis.find(emoji => emoji.name === "profile")
-    var Admin = client.emojis.find(emoji => emoji.name === "Admin")
+    var mc = client.emojis.find(emoji => emoji.name === "yes1")
     var Music = client.emojis.find(emoji => emoji.name === "Music" )
     message.channel.send(`${yes1} **| قائمة الأوامر
 ╔════════════════════════╗
