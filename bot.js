@@ -61,7 +61,7 @@ client.on('ready',  () => {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
-         .setDescription(`** Help | `` By Yara 💕#0790 ``
+         .setDescription(`** Help |  By Yara 
 
        $bc  |  لأرسال برود كاست للأونلاين
        $avatar | لعرض الصورة حقك
@@ -76,6 +76,67 @@ client.on('ready',  () => {
    });
 
 
+ //=================================================================================
+client.on('message', message => {
+var prefix = "$";
+       if(message.content === prefix + "mc") {
+                           if(!message.channel.guild) return message.reply('** This command only for servers**');
+
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ليس لديك صلاحيات__**');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: false
+
+              }).then(() => {
+                  message.reply("**✅__تم تقفيل الشات__ ✅ **")
+              });
+                }
+//FIRE BOT
+    if(message.content === prefix + "uc") {
+                        if(!message.channel.guild) return message.reply('** This command only for servers**');
+
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: true
+
+              }).then(() => {
+                  message.reply("**✅__تم فتح الشات__✅**")
+              });
+    }
+       
+});
+
+var prefix = "$";
+client.on('message',async message => {
+  if (message.content.startsWith(prefix+"bot")) {
+  message.channel.send({
+      embed: new Discord.RichEmbed()
+          .setAuthor(client.user.username,client.user.avatarURL)
+          .setThumbnail(client.user.avatarURL)
+          .setColor('RANDOM')
+          .setTitle('``INFO '+client.user.username+'``')
+          .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+          .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+          .addField('``servers``', [client.guilds.size], true)
+          .addField('``channels``' , `[ ${client.channels.size} ]` , true)
+          .addField('``Users``' ,`[ ${client.users.size} ]` , true)
+          .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
+          .addField('``My ID``' , `[ ${client.user.id} ]` , true)
+          .addField('``My Prefix``' , `[ ${prefix} ]` , true)
+          .addField('``My Language``' , `[ Java Script ]` , true)
+          .setFooter('By: <@608671182446919690> ')
+  })
+}
+});
+ 
+client.on('message', message => {
+    if(message.content.includes('discord.gg')){
+                                            if(!message.channel.guild) return message.reply('**..**');
+        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+        message.delete(3000)
+    return message.reply(`**| ✅ ممنوع نشر جميع الروابط ✅ |**`)
+    }
+}
+});
 
 
 
