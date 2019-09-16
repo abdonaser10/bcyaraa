@@ -88,19 +88,19 @@ var prefix = "$";
             SEND_MESSAGES: false
 
               }).then(() => {
-                  message.reply("** ${yes1} __تم تقفيل الشات__  **")
+                  message.reply("**✅ __تم تقفيل الشات__ ✅**")
               });
                 }
 //FIRE BOT
     if(message.content === prefix + "uc") {
                         if(!message.channel.guild) return message.reply('** This command only for servers**');
 
-   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**:name_badge: __ليس لديك صلاحيات__**');
               message.channel.overwritePermissions(message.guild.id, {
             SEND_MESSAGES: true
 
               }).then(() => {
-                  message.reply("**✅__تم فتح الشات__✅**")
+                  message.reply("**✅ __تم فتح الشات__ ✅**")
               });
     }
        
