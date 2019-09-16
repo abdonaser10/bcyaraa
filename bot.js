@@ -115,8 +115,7 @@ var prefix = "$";
        
 });
 
-
-//bot
+var prefix = "$";
 client.on('message',async message => {
   if (message.content.startsWith(prefix+"bot")) {
   message.channel.send({
