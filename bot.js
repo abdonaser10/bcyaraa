@@ -88,7 +88,7 @@ client.on('message', message=> {
 
  //=================================================================================
 client.on('message', message => {
-var prefix = "-";
+var prefix = "$";
        if(message.content === prefix + "mc") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
