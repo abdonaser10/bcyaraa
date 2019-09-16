@@ -55,7 +55,26 @@ client.on('ready',  () => {
   
   
 //
- 
+ var prefix = "$";
+client.on('message', message => {
+  if(message.content === prefix + "help"){
+    var code = client.emojis.find(emoji => emoji.name === "code" )
+    var bc = client.emojis.find(emoji => emoji.name === "yes1")
+    var yes1 = client.emojis.find(emoji => emoji.name === "yes1")
+    var Ticket = client.emojis.find(emoji => emoji.name === "Ticket")
+    var Profile = client.emojis.find(emoji => emoji.name === "profile")
+    var Admin = client.emojis.find(emoji => emoji.name === "Admin")
+    var Music = client.emojis.find(emoji => emoji.name === "Music" )
+    message.channel.send(`${yes1} **| قائمة الأوامر
+╔════════════════════════╗
+║${yes1} | \`${prefix}bc\` => لأرسال برود كاست للأونلاين  ${yes1}
+║${yes1} | \`${prefix}Admin\` => قائمة أوامر الأدمن.
+║${yes1} | \`${prefix}Tickets\` => قائمة أوامر التكت.
+║${yes1} | \`${prefix}Music\` =>  قائمة أوامر الميوزك.
+╚════════════════════════╝**`)
+  }
+});
+
   client.on("message", message => {
     if (message.content === "$help") {
      const embed = new Discord.RichEmbed() 
