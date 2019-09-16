@@ -50,7 +50,7 @@ client.on('ready',  () => {
 
   client.on('message', msg => {
     if(msg.content === '$inv')
-    msg.reply('**Link Bot. **')
+    msg.reply('**Link Bot. https://discordapp.com/oauth2/authorize?client_id=623152020093927424&permissions=2080374975&scope=bot **')
   });
 
 var prefix = "$";  
