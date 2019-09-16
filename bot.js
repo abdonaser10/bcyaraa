@@ -65,33 +65,16 @@ client.on('message', message => {
     var Music = client.emojis.find(emoji => emoji.name === "Music" )
     message.channel.send(`${yes1} **| قائمة الأوامر
 ╔════════════════════════╗
-║${yes1} | \`${prefix}Public\` => قائمة الأوامر العامة. ${yes1}     
-║${yes1} | \`${prefix}Admin\` => قائمة أوامر الأدمن. ${yes1}
-║${yes1} | \`${prefix}Tickets\` => قائمة أوامر التكت. ${yes1}
-║${yes1} | \`${prefix}Music\` =>  قائمة أوامر الميوزك. ${yes1}
+║${yes1} | \`${prefix}bc\` => لأرسال برود كاست للأونلاين. ${yes1}     
+║${yes1} | \`${prefix}avatar\` => لعرض الصورة حقك. ${yes1}
+║${yes1} | \`${prefix}bot\` => لعرض معلومات البوت. ${yes1}
+║${yes1} | \`${prefix}mc\` => يقفل لك الشات. ${yes1}
+║${yes1} | \`${prefix}uc\` => يفتح لك الشات. ${yes1}
 ╚════════════════════════╝**`)
   }
 });
  
 
-  client.on("message", message => {
-    if (message.content === "$help") {
-     const embed = new Discord.RichEmbed() 
-         .setColor("#00FF00")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`** Help |  By Yara 
-
-       $bc  |  لأرسال برود كاست للأونلاين
-       $avatar | لعرض الصورة حقك
-       $bot | لعرض معلومات البوت
-       $mc | يقفل لك الشات
-       $uc | يفتح لك الشات 
-
-       ** `)
-   message.author.sendEmbed(embed)
-   
-   }
-   });
 
 
  //=================================================================================
